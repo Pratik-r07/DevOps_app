@@ -46,8 +46,8 @@ stage('Docker Login') {
 stage('Tag Images') {
     steps {
         sh '''
-        docker tag emp-backend pratik4106/emp_mng-backend:v2
-        docker tag emp-frontend pratik4106/emp_mng-frontend:v2
+        docker tag emp-backend pratik4106/emp_mng-backend:10
+        docker tag emp-frontend pratik4106/emp_mng-frontend:10
         '''
     }
 }
@@ -55,9 +55,15 @@ stage('Tag Images') {
 stage('Push Images') {
     steps {
         sh '''
-        docker push pratik4106/emp_mng-backend:v2
-        docker push pratik4106/emp_mng-frontend:v2
+        docker push pratik4106/emp_mng-backend:10
+        docker push pratik4106/emp_mng-frontend:10
         '''
+    }
+}
+
+stage('Build Info') {
+    steps {
+        echo "Build Number: ${BUILD_NUMBER}"
     }
 }
     }
