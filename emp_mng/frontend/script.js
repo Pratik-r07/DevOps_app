@@ -1,4 +1,4 @@
-const API = "http://http://127.0.0.1:5000/employees";
+const API = "http://127.0.0.1:5000/employees";
 
 async function loadEmployees() {
     const response = await fetch(API);
