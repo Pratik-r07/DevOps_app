@@ -1,4 +1,4 @@
-const API = "http://192.168.58.2:30997/employees";
+const API = "http://http://127.0.0.1:5000/employees";
 
 async function loadEmployees() {
     const response = await fetch(API);
